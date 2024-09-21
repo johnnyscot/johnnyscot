@@ -12,7 +12,6 @@
             align-items: center;
             background-color: #000038;
             height: 100vh;
-            flex-direction: column;
         }
 
         .flower {
@@ -152,11 +151,52 @@
             transform: rotate(135deg);
         }
 
+        /*
+        .flower__petal--mid {
+            left: -16%;
+            bottom: -59%;
+            border-radius: 0% 119% 0% 100%;
+            background: linear-gradient(180deg, #F5FCCD, #ff7d66);
+            transform-origin: 100% 100%;
+            height: 28vh;
+            transform: rotate(23deg);
+            z-index: -1;
+        }
+
+        .flower__petal--mid:after {
+            left: unset;
+            right: -44%;
+            transform: rotate(156deg);
+            height: 26vh;
+        }
+
+        .flower__petal--bottom {
+            left: -22%;
+            bottom: -59%;
+            border-radius: 0% 119% 0% 100%;
+            background: linear-gradient(180deg, #F5FCCD, #ff7d66);
+            transform-origin: 100% 100%;
+            height: 31vh;
+            transform: rotate(-158deg);
+            z-index: -1;
+        }
+
+        .flower__petal--bottom:after {
+            left: unset;
+            right: -44%;
+            transform: rotate(156deg);
+            height: 26vh;
+        }
+*/
         .flower__petal--right {
             right: -18%;
             border-radius: 50% 0 50% 40%;
             background: linear-gradient(-135deg, #F5FCCD, #ff7d66);
             transform-origin: 0 100%;
+        }
+
+        .flower__petal--front {
+            transform: scaleY(-1);
         }
 
         .flower__center {
@@ -283,6 +323,15 @@
             z-index: 1;
         }
 
+        .flower__leaf--second {
+            top: 30%;
+            right: 100%;
+            background: linear-gradient(45deg, #80c0a1, #F5FCCD);
+            transform: scaleY(-1);
+            transform-origin: 110%;
+            z-index: 1;
+        }
+
         .flower__steam {
             position: relative;
             width: 100%;
@@ -328,6 +377,43 @@
             text-align: center;
         }
 
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            h1 {
+                font-size: 2em;
+            }
+
+        }
+
+        h1 {
+            font-size: 2em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -337,20 +423,12 @@
                 opacity: 1;
             }
         }
-
-        .flower-text {
-            color: white;
-            margin-top: 20px;
-            font-size: 2vh;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
     </style>
 </head>
 
 <body>
-    <h1 class="titulo">Las flores amarillas simbolizan la felicidad. <br>
-        Tú eres la mía ❤️</h1>
+    <h1 class="titulo">pa que deje de ser espectadora <br>
+        MMG </h1>
     <div class="flower__wrapper">
         <div class="flower__sparkles">
             <div class="flower__sparkle"></div>
@@ -372,14 +450,31 @@
             </div>
             <div class="flower__head flower__head--main">
                 <div class="flower__petal flower__petal--back flower__petal--left flower__petal--back-left"></div>
+
+                <div class="flower__petal flower__petal--back flower__petal--left2 flower__petal--back-left2"></div>
+                <div class="flower__petal flower__petal--back flower__petal--mid flower__petal--back-mid"></div>
+                <div class="flower__petal flower__petal--back flower__petal--right flower__petal--back-right"></div>
+                <div class="flower__petal flower__petal--front flower__petal--left flower__petal--front-left"></div>
+                <div class="flower__petal flower__petal--back flower__petal--bottom flower__petal--back-bottom"></div>
+                <div class="flower__petal flower__petal--front flower__petal--right flower__petal--front-right">
+                </div>
+                <div class="flower__center">
+                    <div class="flower__seeds">
+                        <div class="flower__seed"></div>
+                        <div class="flower__seed"></div>
+                        <div class="flower__seed"></div>
+                        <div class="flower__seed"></div>
+                        <div class="flower__seed"></div>
+                        <div class="flower__seed"></div>
+                        <div class="flower__seed"></div>
+                        <div class="flower__seed"></div>
+                        <div class="flower__seed"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Texto añadido debajo de la flor -->
-    <div class="flower-text">
-        Esta flor es un símbolo de nuestra conexión. 🌻
-    </div>
 </body>
 
 </html>
